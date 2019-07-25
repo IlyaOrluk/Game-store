@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/TD-React-Challenge-Test-1/precache-manifest.fdfb21bb1e3c6e2662d0e4e885e28bd0.js"
+  "/IlyaOrluk/Game-store/precache-manifest.4f36668d8055c1021bc750fd9d2d9761.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/TD-React-Challenge-Test-1/index.html", {
+workbox.routing.registerNavigationRoute("/IlyaOrluk/Game-store/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
