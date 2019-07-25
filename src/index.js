@@ -5,21 +5,21 @@ import { BrowserRouter as Router } from 'react-router-dom';
 
 import App from './components/app';
 import ErrorBoundry from './components/error-boundry';
-import BookstoreService from './services/bookstore-service';
-import { BookstoreServiceProvider } from './components/bookstore-service-context';
+import storeService from './services/store-service';
+import { StoreServiceProvider } from './components/store-service-context';
 
 import store from './store';
 
-const bookstoreService = new BookstoreService();
+const DATA = new storeService();
 
 ReactDOM.render(
   <Provider store={store}>
     <ErrorBoundry>
-      <BookstoreServiceProvider value={bookstoreService}>
+      <StoreServiceProvider value={DATA}>
         <Router>
           <App />
         </Router>
-      </BookstoreServiceProvider>
+      </StoreServiceProvider>
     </ErrorBoundry>
   </Provider>,
   document.getElementById('root')

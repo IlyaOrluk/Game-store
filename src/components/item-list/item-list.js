@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import Item from '../item';
 import { connect } from 'react-redux';
 
-import { withBookstoreService } from '../hoc';
-import { fetchBooks, bookAddedToCart } from '../../actions';
+import { withStoreService } from '../hoc';
+import { fetchItems, itemAddedToCart } from '../../actions';
 import { compose } from '../../utils';
 import ErrorIndicator from '../error-indicator';
 import Spinner from '../spinner';
@@ -12,19 +12,19 @@ import './item-list.css';
 
 const ItemList = ({ items, onAddedToCart }) => {
   return (
-    <ul className="item-list">
+    <div className="item-list">
       {
         items.map((item) => {
           return (
-            <li key={item.id}>
+            <div key={item.id} className="preview-item">
               <Item
                 onAddedToCart={() => onAddedToCart(item.id)}
                 item={item} />
-            </li>
+            </div>
           )
         })
       }
-    </ul>
+    </div>
   );
 }
 
@@ -32,7 +32,7 @@ const ItemList = ({ items, onAddedToCart }) => {
 class ItemListContainer extends Component {
 
   componentDidMount() {
-    this.props.fetchBooks();
+    this.props.fetchItems();
   }
 
   render() {
@@ -58,14 +58,14 @@ const mapStateToProps = ({ itemList: { items, loading, error }}) => {
   return { items, loading, error };
 };
 
-const mapDispatchToProps = (dispatch, { bookstoreService }) => {
+const mapDispatchToProps = (dispatch, { storeService }) => {
   return {
-    fetchBooks: fetchBooks(bookstoreService, dispatch),
-    onAddedToCart: (id) => dispatch(bookAddedToCart(id))
+    fetchItems: fetchItems(storeService, dispatch),
+    onAddedToCart: (id) => dispatch(itemAddedToCart(id))
   };
 };
 
 export default compose(
-  withBookstoreService(),
+  withStoreService(),
   connect(mapStateToProps, mapDispatchToProps)
 )(ItemListContainer);

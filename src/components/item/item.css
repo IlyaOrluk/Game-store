@@ -1,19 +1,17 @@
-.book-list-item {
+.preview-item {
   display: flex;
+  margin: 1vh;
+  padding: 1vh;
+  width: 33vh;
+}
+
+.preview-item img {
+  width: 150px;
+  height: 143px;
   margin: 1vh;
 }
 
-.book-list-item .book-cover {
-  flex-shrink: 0;
-  width: 120px;
-  margin-right: 30px;
-}
-
-.book-list-item .book-cover img {
-  max-width: 100%;
-}
-
-.book-list-item .book-details {
+.preview-item .item-details {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -21,10 +19,12 @@
   align-items: flex-start;
 }
 
-.book-list-item .book-details .book-title {
+.preview-item .item-details .item-title {
   font-size: 1.2rem;
+  font-weight: bold;
+  color: #fff;
 }
 
-.book-list-item .book-details .book-price {
+.preview-item .item-details .item-price {
   font-size: 1.4rem;
 }

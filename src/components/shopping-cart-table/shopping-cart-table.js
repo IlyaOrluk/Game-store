@@ -3,9 +3,9 @@ import './shopping-cart-table.css';
 import { connect } from 'react-redux';
 
 import {
-  bookAddedToCart,
-  bookRemovedFromCart,
-  allBooksRemovedFromCart } from '../../actions';
+  itemAddedToCart,
+  itemRemovedFromCart,
+  allItemsRemovedFromCart } from '../../actions';
 
 const ShoppingCartTable = ({ items, total, onIncrease, onDecraese, onDelete }) => {
   const renderRow = (item, idx) => {
@@ -70,9 +70,9 @@ const mapStateToProps = ({shoppingCart: { cartItems, orderTotal }}) => {
 };
 
 const mapDispatchToProps = {
-    onIncrease: bookAddedToCart,
-    onDecraese: bookRemovedFromCart,
-    onDelete: allBooksRemovedFromCart
+    onIncrease: itemAddedToCart,
+    onDecraese: itemRemovedFromCart,
+    onDelete: allItemsRemovedFromCart
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(ShoppingCartTable);
