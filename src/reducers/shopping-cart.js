@@ -22,7 +22,6 @@ const updateCartItems = (cartItems, cartItem, idx) => {
   };
   
   const updateCartItem = (item, cartItem = {}, quantity) => {
-  console.log(cartItem)
     const {
       id = item.id,
       count = 0,

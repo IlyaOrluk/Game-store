@@ -1,6 +1,21 @@
-.item-list {
-  list-style: none;
+.preview-item-details {
   display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.item-details-img {
+  width: 30vh;
+  height: auto;
+  margin: 0 2.5vh;
+}
+
+.item-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.item-details button {
+  width: 12vh;
+  margin: 1vh 0;
 }

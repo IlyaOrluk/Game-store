@@ -3,12 +3,12 @@ import './item.css';
 import { Link } from 'react-router-dom';
 
 const Item = ({ item, onAddedToCart }) => {
-  const { title, author, price, img } = item;
+  const { title, author, price, img, id } = item;
   return (
     <React.Fragment>
         <img src={img} alt="game" />
       <div className="item-details">
-        <Link to='/itemdetails' className="item-title">{title}</Link>
+        <Link to={`/itemdetails/${id}`} className="item-title">{title}</Link>
         <div className="item-author">{author}</div>
         <div className="item-price">${price}</div>
         <button

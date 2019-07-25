@@ -1,3 +1,3 @@
-// import ItemList from './item-list';
+import ItemDetailsContainer from './item-details';
 
-// export default ItemList;
+export default ItemDetailsContainer;

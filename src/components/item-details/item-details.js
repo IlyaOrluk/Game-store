@@ -1,71 +1,88 @@
-// import React from 'react';
-// import Item from '../item';
-// import { connect } from 'react-redux';
+import React from 'react';
+import { connect } from 'react-redux';
 
-// import { withItemstoreService } from '../hoc';
-// import { fetchItems, itemAddedToCart } from '../../actions';
-// import { compose } from '../../utils';
-// import ErrorIndicator from '../error-indicator';
-// import Spinner from '../spinner';
+import { withStoreService } from '../hoc';
+import { fetchItems, itemAddedToCart } from '../../actions';
+import { compose } from '../../utils';
+import ErrorIndicator from '../error-indicator';
+import Spinner from '../spinner';
 
-// import './item-list.css';
+import './item-details.css';
 
-// const ItemDetails = ({ items, onAddedToCart }) => {
-//   return (
-//     <div className="item-details">
-//       {
-//         items.map((item) => {
-//           return (
-//             <div key={item.id} className="preview-item">
-//               <Item
-//                 onAddedToCart={() => onAddedToCart(item.id)}
-//                 item={item} />
-//             </div>
-//           )
-//         })
-//       }
-//     </div>
-//   );
-// }
+const Detail = ({ item, field, label, itemTag }) => {
+    return (
+        React.createElement(itemTag, null, `${label} ${item[field]}`)
+    );
+};
+
+const ItemDetails = ({ items, itemId, onAddedToCart, ...props }) => {
+    const item = items[itemId-1];
+    console.log(item);
+    const { title, img } = item;
+    return (
+        <div className='preview-item-details'>
+            <img src={img} alt="game" className='item-details-img' />
+            <div className='item-details'>
+                <h4>{title}</h4>
+                {
+                    React.Children.map(props.children, (child) => {
+                        return React.cloneElement(child, { item });
+                    })
+                }
+                <button
+                    onClick={() => onAddedToCart(item.id)}
+                    className="btn btn-warning add-to-cart">
+                    Add to cart
+                </button>
+            </div>
+        </div>
+    );
+}
 
 
-// class ItemDetailsContainer extends React.Component {
+class ItemDetailsContainer extends React.Component {
 
-//   componentDidMount() {
-//     this.props.fetchBooks();
-//   }
+    componentDidMount() {
+        this.props.fetchBooks();
+    }
 
-//   render() {
-//     const { items, loading, error, onAddedToCart} = this.props;
+    render() {
+        const { items, itemId, loading, error, onAddedToCart } = this.props;
+        if (loading) {
+            return <Spinner />
+        }
 
-//     if (loading) {
-//       return <Spinner />
-//     }
+        if (error) {
+            return <ErrorIndicator />
+        }
 
-//     if (error) {
-//       return <ErrorIndicator />
-//     }
+        return (
+            <React.Fragment>
+                <ItemDetails
+                    onAddedToCart={onAddedToCart}
+                    itemId={itemId}
+                    items={items}>
 
-//     return (
-//       <ItemDetails>
+                    <Detail itemTag='span' label='Price: $' field='price' /><br />
+                    <Detail itemTag='span' label='Author: ' field='author' />
+                </ItemDetails>
+            </React.Fragment>
+        );
+    }
+}
 
-//       </ItemDetails>
-//     );
-//   }
-// }
+const mapStateToProps = ({ itemList: { items, loading, error } }) => {
+    return { items, loading, error };
+};
 
-// const mapStateToProps = ({ itemList: { items, loading, error }}) => {
-//   return { items, loading, error };
-// };
+const mapDispatchToProps = (dispatch, { storeService }) => {
+    return {
+        fetchBooks: fetchItems(storeService, dispatch),
+        onAddedToCart: (id) => dispatch(itemAddedToCart(id))
+    };
+};
 
-// const mapDispatchToProps = (dispatch, { bookstoreService }) => {
-//   return {
-//     fetchBooks: fetchBooks(bookstoreService, dispatch),
-//     onAddedToCart: (id) => dispatch(bookAddedToCart(id))
-//   };
-// };
-
-// export default compose(
-//   withBookstoreService(),
-//   connect(mapStateToProps, mapDispatchToProps)
-// )(ItemDetailsContainer);
+export default compose(
+    withStoreService(),
+    connect(mapStateToProps, mapDispatchToProps)
+)(ItemDetailsContainer);
