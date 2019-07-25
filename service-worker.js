@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/IlyaOrluk/Game-store/precache-manifest.a731c75e69e6b62dd112003e3af25e6f.js"
+  "/Game-store/precache-manifest.1fedf2a88a7679b8e05f79b2ef2e0b1f.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/IlyaOrluk/Game-store/index.html", {
+workbox.routing.registerNavigationRoute("/Game-store/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
