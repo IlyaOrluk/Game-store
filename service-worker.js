@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/IlyaOrluk/Game-store/precache-manifest.4f36668d8055c1021bc750fd9d2d9761.js"
+  "/IlyaOrluk/Game-store/precache-manifest.a731c75e69e6b62dd112003e3af25e6f.js"
 );
 
 workbox.clientsClaim();
