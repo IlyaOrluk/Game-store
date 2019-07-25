@@ -1,14 +1,14 @@
 {
   "main.css": "/Game-store/static/css/main.58b548ee.chunk.css",
-  "main.js": "/Game-store/static/js/main.efd2e0a8.chunk.js",
-  "main.js.map": "/Game-store/static/js/main.efd2e0a8.chunk.js.map",
-  "static/js/1.7c1981c3.chunk.js": "/Game-store/static/js/1.7c1981c3.chunk.js",
-  "static/js/1.7c1981c3.chunk.js.map": "/Game-store/static/js/1.7c1981c3.chunk.js.map",
+  "main.js": "/Game-store/static/js/main.a16699c1.chunk.js",
+  "main.js.map": "/Game-store/static/js/main.a16699c1.chunk.js.map",
+  "static/js/1.ad53e553.chunk.js": "/Game-store/static/js/1.ad53e553.chunk.js",
+  "static/js/1.ad53e553.chunk.js.map": "/Game-store/static/js/1.ad53e553.chunk.js.map",
   "runtime~main.js": "/Game-store/static/js/runtime~main.029eb189.js",
   "runtime~main.js.map": "/Game-store/static/js/runtime~main.029eb189.js.map",
   "static/media/app.css": "/Game-store/static/media/bg2.e2d95412.jpg",
   "static/css/main.58b548ee.chunk.css.map": "/Game-store/static/css/main.58b548ee.chunk.css.map",
   "index.html": "/Game-store/index.html",
-  "precache-manifest.1fedf2a88a7679b8e05f79b2ef2e0b1f.js": "/Game-store/precache-manifest.1fedf2a88a7679b8e05f79b2ef2e0b1f.js",
+  "precache-manifest.71e84e1acb963346e2eb7aef79439060.js": "/Game-store/precache-manifest.71e84e1acb963346e2eb7aef79439060.js",
   "service-worker.js": "/Game-store/service-worker.js"
 }
