@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/IlyaOrluk/Game-store/static/js/runtime~main.076ae5b7.js"
   },
   {
-    "revision": "8110af42fc4adbc3da55",
-    "url": "/IlyaOrluk/Game-store/static/js/main.8110af42.chunk.js"
+    "revision": "628a90694c8546191eb2",
+    "url": "/IlyaOrluk/Game-store/static/js/main.628a9069.chunk.js"
   },
   {
-    "revision": "6120bbe708dd00797f8d",
-    "url": "/IlyaOrluk/Game-store/static/js/1.6120bbe7.chunk.js"
+    "revision": "f695d053a50a0f9ed69f",
+    "url": "/IlyaOrluk/Game-store/static/js/1.f695d053.chunk.js"
   },
   {
-    "revision": "8110af42fc4adbc3da55",
+    "revision": "628a90694c8546191eb2",
     "url": "/IlyaOrluk/Game-store/static/css/main.640acef8.chunk.css"
   },
   {
-    "revision": "0e49cbfa702460285fadd9e1e9dd6aa5",
+    "revision": "ddbabf6bc2a62d303829e48cbd4901b3",
     "url": "/IlyaOrluk/Game-store/index.html"
   }
 ];
