@@ -1,14 +1,14 @@
 {
-  "main.css": "/IlyaOrluk/Game-store/static/css/main.640acef8.chunk.css",
-  "main.js": "/IlyaOrluk/Game-store/static/js/main.628a9069.chunk.js",
-  "main.js.map": "/IlyaOrluk/Game-store/static/js/main.628a9069.chunk.js.map",
-  "static/js/1.f695d053.chunk.js": "/IlyaOrluk/Game-store/static/js/1.f695d053.chunk.js",
-  "static/js/1.f695d053.chunk.js.map": "/IlyaOrluk/Game-store/static/js/1.f695d053.chunk.js.map",
-  "runtime~main.js": "/IlyaOrluk/Game-store/static/js/runtime~main.076ae5b7.js",
-  "runtime~main.js.map": "/IlyaOrluk/Game-store/static/js/runtime~main.076ae5b7.js.map",
-  "static/media/app.scss": "/IlyaOrluk/Game-store/static/media/bg2.e2d95412.jpg",
-  "static/css/main.640acef8.chunk.css.map": "/IlyaOrluk/Game-store/static/css/main.640acef8.chunk.css.map",
-  "index.html": "/IlyaOrluk/Game-store/index.html",
-  "precache-manifest.fced9f87b7694065ca13b11a7d0d1d1f.js": "/IlyaOrluk/Game-store/precache-manifest.fced9f87b7694065ca13b11a7d0d1d1f.js",
-  "service-worker.js": "/IlyaOrluk/Game-store/service-worker.js"
+  "main.css": "/Game-store/static/css/main.a1199c04.chunk.css",
+  "main.js": "/Game-store/static/js/main.3185e0e3.chunk.js",
+  "main.js.map": "/Game-store/static/js/main.3185e0e3.chunk.js.map",
+  "static/js/1.f695d053.chunk.js": "/Game-store/static/js/1.f695d053.chunk.js",
+  "static/js/1.f695d053.chunk.js.map": "/Game-store/static/js/1.f695d053.chunk.js.map",
+  "runtime~main.js": "/Game-store/static/js/runtime~main.029eb189.js",
+  "runtime~main.js.map": "/Game-store/static/js/runtime~main.029eb189.js.map",
+  "static/media/app.scss": "/Game-store/static/media/bg2.e2d95412.jpg",
+  "static/css/main.a1199c04.chunk.css.map": "/Game-store/static/css/main.a1199c04.chunk.css.map",
+  "index.html": "/Game-store/index.html",
+  "precache-manifest.b9faaa70bbbce6424d6989d2ca8a3b23.js": "/Game-store/precache-manifest.b9faaa70bbbce6424d6989d2ca8a3b23.js",
+  "service-worker.js": "/Game-store/service-worker.js"
 }
