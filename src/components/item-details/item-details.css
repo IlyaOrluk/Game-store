@@ -3,9 +3,8 @@
   align-items: flex-start;
 }
 .item-details-img {
-  width: 30vh;
+  width: 200px;
   height: auto;
-  margin: 0 2.5vh;
 }
 
 .item-details {
@@ -16,6 +15,13 @@
 }
 
 .item-details button {
-  width: 12vh;
-  margin: 1vh 0;
+  width: 12px;
+  margin: 5vh 0;
+}
+
+.item-card {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  margin: 0 5vh;
 }

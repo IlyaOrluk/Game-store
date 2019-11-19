@@ -18,22 +18,27 @@ const Detail = ({ item, field, label, itemTag }) => {
 const ItemDetails = ({ items, itemId, onAddedToCart, ...props }) => {
     const item = items[itemId-1];
     console.log(item);
-    const { title, img } = item;
+    const { title, img, price } = item;
     return (
         <div className='preview-item-details'>
+            <div className='item-card'>
             <img src={img} alt="game" className='item-details-img' />
+            <button
+                    onClick={() => onAddedToCart(item.id)}
+                    className="btn btn-warning add-to-cart">
+                    Add to cart ${price}
+                </button>
+            </div>
+
             <div className='item-details'>
                 <h4>{title}</h4>
+                <hr></hr>
                 {
                     React.Children.map(props.children, (child) => {
                         return React.cloneElement(child, { item });
                     })
                 }
-                <button
-                    onClick={() => onAddedToCart(item.id)}
-                    className="btn btn-warning add-to-cart">
-                    Add to cart
-                </button>
+
             </div>
         </div>
     );
@@ -62,9 +67,12 @@ class ItemDetailsContainer extends React.Component {
                     onAddedToCart={onAddedToCart}
                     itemId={itemId}
                     items={items}>
+                        
+                    <Detail itemTag='span' label='Author: ' field='author' /><br/>
+                    <Detail itemTag='span' label='Summary: ' field='summary' />
+                    <Detail itemTag='span' label='Price: $' field='price' />
 
-                    <Detail itemTag='span' label='Price: $' field='price' /><br />
-                    <Detail itemTag='span' label='Author: ' field='author' />
+                    
                 </ItemDetails>
             </React.Fragment>
         );

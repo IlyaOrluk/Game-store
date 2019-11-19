@@ -2,9 +2,10 @@
   "name": "re-store",
   "version": "0.1.0",
   "private": true,
-  "homepage": " https://github.com/IlyaOrluk/Game-store " ,
+  "homepage": " https://github.com/IlyaOrluk/Game-store ",
   "dependencies": {
     "gh-pages": "^2.0.1",
+    "node-sass": "^4.13.0",
     "prop-types": "^15.6.2",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",

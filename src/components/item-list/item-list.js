@@ -7,6 +7,7 @@ import { fetchItems, itemAddedToCart } from '../../actions';
 import { compose } from '../../utils';
 import ErrorIndicator from '../error-indicator';
 import Spinner from '../spinner';
+import { Link } from 'react-router-dom'
 
 import './item-list.css';
 
@@ -16,10 +17,15 @@ const ItemList = ({ items, onAddedToCart }) => {
       {
         items.map((item) => {
           return (
-            <div key={item.id} className="preview-item">
-              <Item
-                onAddedToCart={() => onAddedToCart(item.id)}
-                item={item} />
+            <div>
+              <Link  key={item.id} className="preview-item" to={`/itemdetails/${item.id}`}>
+                <Item
+                  onAddedToCart={(e) => {
+                    e.preventDefault()
+                    onAddedToCart(item.id)}
+                  }
+                  item={item} />
+              </Link>
             </div>
           )
         })

@@ -26,11 +26,13 @@ const updateCartItems = (cartItems, cartItem, idx) => {
       id = item.id,
       count = 0,
       title = item.title,
+      img = item.img,
       total = 0 } = cartItem;
   
     return {
       id,
       title,
+      img,
       count: count + quantity,
       total: total + quantity*item.price
     };

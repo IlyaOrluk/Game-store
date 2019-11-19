@@ -1,5 +1,5 @@
 import React from 'react';
-import './item.css';
+import './item.scss';
 import { Link } from 'react-router-dom';
 
 const Item = ({ item, onAddedToCart }) => {
@@ -9,8 +9,9 @@ const Item = ({ item, onAddedToCart }) => {
         <img src={img} alt="game" />
       <div className="item-details">
         <Link to={`/itemdetails/${id}`} className="item-title">{title}</Link>
-        <div className="item-author">{author}</div>
-        <div className="item-price">${price}</div>
+        <span className="item-author">{author}</span>
+        <span className="item-price">${price}</span>
+        
         <button
           onClick={onAddedToCart}
           className="btn btn-warning add-to-cart">
